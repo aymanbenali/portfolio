@@ -31,17 +31,18 @@ const useWindowSize = () => {
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    maxWidth: 345,
     borderStyle: 'solid',
     borderRadius: '20px',
     borderColor: '#7510F7'
   },
   grid: {
-    margin: theme.spacing(3, 3),
+    margin: theme.spacing(3, 4),
+    maxWidth: 345
   },
   gridMobile: {
     margin: theme.spacing(3, 0),
-    maxWidth: 330
+    maxWidth: '100%',
+    Width: 'auto'
   },
   media: {
     height: 140,
