@@ -16,7 +16,7 @@ const App = (props) => {
           }}
         >
           <Switch>
-            <Route exact path="/" component={Home} />
+            <Route exact path="/portfolio" component={Home} />
           </Switch>
       </div>
     </Router>
