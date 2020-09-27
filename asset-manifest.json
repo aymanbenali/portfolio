@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/portfolio/static/css/main.06c988bc.chunk.css",
+    "main.js": "/portfolio/static/js/main.77582ebe.chunk.js",
+    "main.js.map": "/portfolio/static/js/main.77582ebe.chunk.js.map",
+    "runtime-main.js": "/portfolio/static/js/runtime-main.209c2d7e.js",
+    "runtime-main.js.map": "/portfolio/static/js/runtime-main.209c2d7e.js.map",
+    "static/js/2.b1a9d1e9.chunk.js": "/portfolio/static/js/2.b1a9d1e9.chunk.js",
+    "static/js/2.b1a9d1e9.chunk.js.map": "/portfolio/static/js/2.b1a9d1e9.chunk.js.map",
+    "index.html": "/portfolio/index.html",
+    "precache-manifest.3e59a1e0a542e2efca8ae22d2fb2013e.js": "/portfolio/precache-manifest.3e59a1e0a542e2efca8ae22d2fb2013e.js",
+    "service-worker.js": "/portfolio/service-worker.js",
+    "static/css/main.06c988bc.chunk.css.map": "/portfolio/static/css/main.06c988bc.chunk.css.map",
+    "static/js/2.b1a9d1e9.chunk.js.LICENSE.txt": "/portfolio/static/js/2.b1a9d1e9.chunk.js.LICENSE.txt",
+    "static/media/Ayman.png": "/portfolio/static/media/Ayman.bd533718.png",
+    "static/media/quoteWhite.png": "/portfolio/static/media/quoteWhite.df1e2f2c.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.209c2d7e.js",
+    "static/js/2.b1a9d1e9.chunk.js",
+    "static/css/main.06c988bc.chunk.css",
+    "static/js/main.77582ebe.chunk.js"
+  ]
+}
