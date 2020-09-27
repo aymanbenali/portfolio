@@ -17,7 +17,6 @@ const Transition = React.forwardRef(function Transition(props, ref) {
 
 const DialogProject = (props) => {
   const {state, handle, data, screenSize} = props;
-  console.log(screenSize)
   const { description, name, images, technologies } = data;
   if (!description) return <div></div>;
   const descriptions = description.split('.');
@@ -56,10 +55,10 @@ const DialogProject = (props) => {
               <img alt="complex" src={images[0]} width={imgSize} height='200' />
             </Grid>
             <Grid item>
-              <Typography style={theme.palette.typographyWhiteColor}> {name} </Typography>
+              <Typography style={theme().palette.typographyWhiteColor}> {name} </Typography>
               <Container maxWidth="la">
                 {
-                  descriptions.map(description => <Typography style={theme.palette.typographyWhiteColor}> ✓{description}. </Typography>)
+                  descriptions.map(description => <Typography style={theme().palette.typographyWhiteColor}> ✓{description}. </Typography>)
                 }
               </Container>
             </Grid>

@@ -43,7 +43,7 @@ const DialogContact = (props) => {
           }}>
           <Grid container spacing={3}>
             <Grid item xs={12}>
-              <Typography variant='h3' style={theme.palette.title}> Thanks for taking the time to reach out. How can I help you today?</Typography>
+              <Typography variant='h3' style={theme().palette.title}> Thanks for taking the time to reach out. How can I help you today?</Typography>
             </Grid>
             <Grid item xs={3} />
             <Grid item xs={3}>

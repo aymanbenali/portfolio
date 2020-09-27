@@ -10,7 +10,7 @@ import Chip from '@material-ui/core/Chip';
 import Container from '@material-ui/core/Container';
 import Button from '@material-ui/core/Button';
 
-import theme from './theme';
+import Theme from './theme';
 import Card from './Card';
 import Footer from './Footer';
 import DialogContact from './DialogContact';
@@ -20,9 +20,10 @@ import './App.css';
 import JsonData from './data.json';
 
 export const generateChips = (chips, withTitle, isWhite) => {
+  const { withWhithe, withoutWhite, div, orginize } = Theme().palette.chips
   return (
-    <div style={{marginLeft: '20px'}}>
-      {withTitle ? <Typography style={theme.palette.typographyGreyColor}> Technologies: </Typography> : ''}
+    <div style={div}>
+      {withTitle ? <Typography style={Theme().palette.typographyGreyColor}> Technologies: </Typography> : ''}
       <br />
       <div>
         {
@@ -30,12 +31,12 @@ export const generateChips = (chips, withTitle, isWhite) => {
             return <Chip
               avatar={
                 <Avatar style={{backgroundColor: `${chip.color}`}}>
-                  <p style={theme.palette.typographyGreyColor}>{chip.name.charAt(0)}</p>
+                  <p style={Theme().palette.typographyGreyColor}>{chip.name.charAt(0)}</p>
                 </Avatar>
               }
-              label={<p style={{color: isWhite ? '#FFFFFF': '#141C3A'}}>{chip.name}</p>}
+              label={<p style={ isWhite ? withWhithe : withoutWhite}>{chip.name}</p>}
               clickable
-              style={{margin: theme.spacing(0.5), color:'#FFFFFF'}}
+              style={orginize}
               variant="outlined"
             />
           })
@@ -64,7 +65,7 @@ export const useWindowSize = () => {
 const FirstSalute = () => {
   const name = `My name is Ayman Benali`;
   return (
-    <div style={{color: '#7510F7'}} >
+    <div style={Theme().palette.firestSalute}>
       <Grid container direction="column" justify="center" alignItems="stretch" >
         <section>
           <GreatThings text='Hello World 👋,' />
@@ -78,26 +79,23 @@ const FirstSalute = () => {
 
 const MyDescription = () => {
   const myDescription = JsonData.about.description.split('.');
+  const { grid, mask, text } = Theme().palette.description;
   myDescription.pop();
+  const computerDefaultSize = 1246;
   const size = useWindowSize();
   return (
     <div>
-      <Grid container direction={size.width < 1246 ? "column" : ''} justify="center" alignItems="stretch" >
-        <Grid item xs={2} style={size.width < 1246 ? {margin: '20%'} : {marginTop: '7%'}}>
+      <Grid container direction={size.width < computerDefaultSize ? "column" : ''} justify="center" alignItems="stretch" >
+        <Grid item xs={2} style={grid}>
           <ReactRoundedImage image={MyPhoto} roundedSize="5"/>
         </Grid>
         <Grid item xs={10}>
-          <Typography component="div" style={{
-            backgroundColor: '#7510F7',
-            height: '105%',
-            borderRadius: '25px',
-            width: size.width < 1246 ? '120%' : 'auto'
-          }}>
+          <Typography component="div" style={mask}>
             <br />
-              <Typography variant='h4' style={theme.palette.descriptionText}><b> Hi I'm Ayman, Nice To Meet You </b></Typography>
+              <Typography variant='h4' style={text}><b> Hi I'm Ayman, Nice To Meet You </b></Typography>
             { 
               myDescription.map(item => {
-                return <Typography style={theme.palette.descriptionText}> {item}. </Typography>          
+                return <Typography style={text}> {item}. </Typography>          
               })
             }
             <Technologies />
@@ -113,7 +111,7 @@ const Technologies = () => {
   return (
     <div>
       <grid container direction="column" justify="center" alignItems="stretch">
-        <Typography style={theme.palette.descriptionText}> here are some of the most technologies i work with: </Typography>
+        <Typography style={Theme().palette.descriptionText}> here are some of the most technologies i work with: </Typography>
         {generateChips(technologies, false, true)}
       </grid>
     </div>
@@ -130,31 +128,29 @@ const Jobs = () => {
         <br /><br />
           <Grid container justify="center" alignItems="stretch" >
             <Grid item xs={4}>
-              <Typography variant="h5" style={theme.palette.typographyWhiteColor} >{job.company}</Typography>
+              <Typography variant="h5" style={Theme().palette.typographyWhiteColor} >{job.company}</Typography>
             </Grid>
             <Grid item xs={7} />
             <Grid item xs={1}>
-              <Typography variant="h7" style={theme.palette.typographyGreyColor}>{job.time}</Typography>
+              <Typography variant="h7" style={Theme().palette.typographyGreyColor}>{job.time}</Typography>
             </Grid>
             <Grid container justify="center" alignItems="stretch" direction="column">
               <Typography variant="h7" style={{marginLeft: '20px'}}>{job.position}</Typography>
               {
                 projects.map(project => {
                   const { description } = project;
-                  console.log(description);
                   return (
                     <div>
                       {description.map(desc => {
                           return (
-                            <div style={{borderStyle: 'solid', borderColor: '#141C3A', borderRadius: '25px', margin: '20px', padding: '20px'}}>
-                                <Typography style={theme.palette.typographyGreyColor} variant="h6">✓{desc}</Typography>
+                            <div style={Theme().palette.jobs.mask}>
+                                <Typography style={Theme().palette.typographyGreyColor} variant="h6">✓{desc}</Typography>
                             </div>
                           )
                         })}
-                       {generateChips(project.technologies, true)} 
+                       {generateChips(project.technologies, false)} 
                     </div>
                   )
-
                 })
               }
             </Grid>
@@ -197,29 +193,25 @@ const Header = () => {
 }
 
 const App = () => {
-  return (
+  console.log(Theme())
+  if (Theme()) return (
     <div>
       <Container maxWidth="la">
-        <MuiThemeProvider theme={theme}>
+        <MuiThemeProvider>
           <Header />
           <FirstSalute />
           <MyDescription />
           <br /><br />
-          <Typography component="div" style={{
-            borderStyle: 'solid',
-            borderColor: '#7510F7',
-            height: '105%',
-            borderRadius: '25px',
-          }}>
+          <Typography component="div" style={Theme().palette.mask}>
             <div style={{margin: '25px'}}>
-              <Typography variant="h4" style={theme.palette.title}>
+              <Typography variant="h4" style={Theme().palette.title}>
                 Professional career
               </Typography>
               <Jobs />              
             </div>
           </Typography>
             <br />
-          <Typography variant="h4" style={theme.palette.title}>
+          <Typography variant="h4" style={Theme().palette.title}>
             Projects
           </Typography>  
           <br />        
