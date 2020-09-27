@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { GreatThings } from 'moving-letters'
 
-import { useTheme, MuiThemeProvider } from '@material-ui/core/styles';
+import { MuiThemeProvider } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Avatar from '@material-ui/core/Avatar';
 import ReactRoundedImage from "react-rounded-image";
@@ -62,7 +62,6 @@ export const useWindowSize = () => {
 }
 
 const FirstSalute = () => {
-  const theme = useTheme();
   const name = `My name is Ayman Benali`;
   return (
     <div style={{color: '#7510F7'}} >

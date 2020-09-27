@@ -34,7 +34,7 @@ const useStyles = makeStyles((theme) => ({
 const generateImage = () => {
 	return (
 	  	<div style={{marginLeft: '20%'}}>
-	  		<img src={quoteWhite} width='70%' height='70%'/>
+	  		<img src={quoteWhite} width='70%' height='70%' alt=''/>
 	  	</div>
 	)
 }

@@ -51,14 +51,12 @@ export default class DialogLog extends React.Component {
               <Grid item xs={3}>
                 <TextField 
                   id="outlined-secondary"
-                  label="Outlined secondary"
                   variant="outlined"
                   label="Name" />
               </Grid>
               <Grid item xs={3}>
                 <TextField
                   id="outlined-secondary"
-                  label="Outlined secondary"
                   variant="outlined"
                   label="Email" />
               </Grid>
