@@ -7,10 +7,18 @@
   pointer-events: none;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;1,300&display=swap');
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
+}
+#particles-js {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: -100;
 }
 
 .App-header {
