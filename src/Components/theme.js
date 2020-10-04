@@ -3,23 +3,23 @@ import { useState, useEffect } from 'react';
 
 const font =  "'Roboto Condensed', sans-serif";
 
-
 const useWindowSize = () => {
-  const [windowSize, setWindowSize] = useState({ width: undefined, height: undefined });
+  const isSSR = typeof window !== "undefined";
+  const [windowSize, setWindowSize] = useState({
+    width: isSSR ? 1200 : window.innerWidth,
+    height: isSSR ? 800 : window.innerHeight,
+  });
+  function changeWindowSize() {
+    setWindowSize({ width: window.innerWidth, height: window.innerHeight });
+  }
   useEffect(() => {
-    const handleResize = () => {
-      setWindowSize({
-        width: window.innerWidth,
-        height: window.innerHeight,
-      });
-    }
-    window.addEventListener("resize", handleResize);
-    handleResize();
-    return () => window.removeEventListener("resize", handleResize);
+    window.addEventListener("resize", changeWindowSize);
+    return () => {
+      window.removeEventListener("resize", changeWindowSize);
+    };
   }, []);
   return windowSize;
-}
-
+};
 
 const Theme = () => {
   const computerDefaultSize = 1246;
@@ -39,7 +39,10 @@ const Theme = () => {
         }
       },
       description:{
-        grid:{margin: size.width < computerDefaultSize ? '20%' : '7%'},
+        grid:{
+          margin: size.width < computerDefaultSize ? '20%' : '',
+          marginTop: size.width > computerDefaultSize ? '7%' : ''
+        },
         mask:{
           backgroundColor: '#7510F7',
           height: '105%',
@@ -52,16 +55,26 @@ const Theme = () => {
           button: {
             textTransform: "none"
           },
-          margin: '20px',
-          textAlign: 'center'
-          }
-      },
+          margin: '20px'
+          },
+        },
+        card: {
+          root: {
+            borderStyle: 'solid',
+            borderRadius: '20px',
+            borderColor: '#7510F7'
+          },
+          grid: {
+            margin: '2%',
+            maxWidth: size.width > computerDefaultSize ? '100%' : 330,
+            width: size.width > computerDefaultSize ? 'auto' : '',
+          },
+          media: {
+            height: 140,
+          },
+        },
       jobs: {
         mask: {
-          borderStyle: 'solid',
-          borderColor: '#141C3A',
-          borderRadius: '25px',
-          margin: '20px',
           padding: '20px'
         }
       },
@@ -99,6 +112,7 @@ const Theme = () => {
         contrastText: '#000',
       },
     },
+    size,
   });
 }
 

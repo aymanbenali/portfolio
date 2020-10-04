@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { GreatThings } from 'moving-letters'
+import GreatThings from './GreatThings'
 
 import { MuiThemeProvider } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
@@ -15,12 +15,11 @@ import Card from './Card';
 import Footer from './Footer';
 import DialogContact from './DialogContact';
 
-import MyPhoto from "./images/Ayman.png";
-import './App.css';
-import JsonData from './data.json';
+import MyPhoto from "../images/Ayman.png";
+import JsonData from './../data.json';
 
 export const generateChips = (chips, withTitle, isWhite) => {
-  const { withWhithe, withoutWhite, div, orginize } = Theme().palette.chips
+  const { withWhite, withoutWhite, div, orginize } = Theme().palette.chips
   return (
     <div style={div}>
       {withTitle ? <Typography style={Theme().palette.typographyGreyColor}> Technologies: </Typography> : ''}
@@ -34,7 +33,7 @@ export const generateChips = (chips, withTitle, isWhite) => {
                   <p style={Theme().palette.typographyGreyColor}>{chip.name.charAt(0)}</p>
                 </Avatar>
               }
-              label={<p style={ isWhite ? withWhithe : withoutWhite}>{chip.name}</p>}
+              label={<p style={ isWhite ? withWhite : withoutWhite}>{chip.name}</p>}
               clickable
               style={orginize}
               variant="outlined"
@@ -111,7 +110,7 @@ const Technologies = () => {
   return (
     <div>
       <grid container direction="column" justify="center" alignItems="stretch">
-        <Typography style={Theme().palette.descriptionText}> here are some of the most technologies i work with: </Typography>
+        <Typography style={Theme().palette.description.text}> Here are some of the most technologies i work with: </Typography>
         {generateChips(technologies, false, true)}
       </grid>
     </div>

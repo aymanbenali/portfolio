@@ -16,12 +16,13 @@ const Transition = React.forwardRef(function Transition(props, ref) {
 });
 
 const DialogProject = (props) => {
-  const {state, handle, data, screenSize} = props;
+  const {state, handle, data} = props;
+  const screenSize = theme().size.width;
   const { description, name, images, technologies } = data;
   if (!description) return <div></div>;
   const descriptions = description.split('.');
   descriptions.pop();
-  const imgSize = screenSize.width > 1246 ? 300 : 280
+  const imgSize = screenSize > 1246 ? 300 : 280
 
   return (
     <Dialog
@@ -50,7 +51,7 @@ const DialogProject = (props) => {
             marginRight: '20px',
             padding: '30px'
           }}>
-          <Grid container direction={screenSize.width < 1246 ? "column" : ''} justify="center" alignItems="stretch" >
+          <Grid container direction={screenSize < 1246 ? "column" : ''} justify="center" alignItems="stretch" >
             <Grid item xs={3}>
               <img alt="complex" src={images[0]} width={imgSize} height='200' />
             </Grid>

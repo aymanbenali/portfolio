@@ -49,14 +49,12 @@ const DialogContact = (props) => {
             <Grid item xs={3}>
               <TextField 
                 id="outlined-secondary"
-                label="Outlined secondary"
                 variant="outlined"
                 label="Name" />
             </Grid>
             <Grid item xs={3}>
               <TextField
                 id="outlined-secondary"
-                label="Outlined secondary"
                 variant="outlined"
                 label="Email" />
             </Grid>

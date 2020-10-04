@@ -3,7 +3,7 @@ import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 
-import quoteWhite from './images/quoteWhite.png';
+import quoteWhite from '../images/quoteWhite.png';
 import Fab from '@material-ui/core/Fab';
 import Tooltip from '@material-ui/core/Tooltip';
 import GitHubIcon from '@material-ui/icons/GitHub';
@@ -80,10 +80,9 @@ const Footer = () => {
 
 	return (
 		<div>
-	      <Grid container justify="center" alignItems="stretch">
+	      <Grid>
 	      	<Typography component="div" style={{
 	            backgroundColor: '#7510F7',
-	            borderRadius: '25px',
 	            padding: '25px'
 	          }}>
 	          	{generateImage()}
