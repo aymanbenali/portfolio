@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Grid from '@material-ui/core/Grid';
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
@@ -7,24 +7,18 @@ import CardMedia from '@material-ui/core/CardMedia';
 import Typography from '@material-ui/core/Typography';
 
 import Dialog from './DialogProject';
-import theme from './theme';
 
-import JsonData from './../data.json';
-
-export default function MediaCard() {
-  const { root, grid, media } = theme().palette.card;
-  const { projects } = JsonData;
-  const [open, setOpen] = React.useState(false);
-  const [currentData, setcurrentData] = React.useState(false);
+const MediaCard = ({ projects, theme }) => {
+  const { root, grid, media } = theme;
+  const [open, setOpen] = useState(false);
+  const [currentData, setcurrentData] = useState(false);
 
   const handleClickOpen = (data) => {
     setcurrentData(data);
     setOpen(true);
   };
 
-  const handleClose = () => {
-    setOpen(false);
-  };
+  const handleClose = () => setOpen(false);
 
   return (
     <Grid container>
@@ -32,7 +26,7 @@ export default function MediaCard() {
         const { description, name, images } = project;
         return(
           <Grid item style={grid}>
-            <Dialog state={open} handle={handleClose} data={currentData}/>
+            <Dialog state={open} handle={handleClose} data={currentData} theme={theme}/>
             <Card style={root}>
               <CardActionArea onClick={() => handleClickOpen(project)}>
                 <CardMedia
@@ -56,3 +50,5 @@ export default function MediaCard() {
     </Grid>
   )
 }
+
+export default MediaCard;

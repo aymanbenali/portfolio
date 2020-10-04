@@ -6,14 +6,13 @@ import Typography from '@material-ui/core/Typography';
 import CloseIcon from '@material-ui/icons/Close';
 import Container from '@material-ui/core/Container';
 import Dialog from '@material-ui/core/Dialog';
-import { generateChips } from './home.js';
 import Slide from '@material-ui/core/Slide';
 import Grid from '@material-ui/core/Grid';
-import theme from './theme'
 
-const Transition = React.forwardRef(function Transition(props, ref) {
-  return <Slide direction="up" ref={ref} {...props} />;
-});
+import theme from '../Theme'
+import ChipsGenerator from './Chips';
+
+const Transition = React.forwardRef((props, ref) => <Slide direction="up" ref={ref} {...props} />);
 
 const DialogProject = (props) => {
   const {state, handle, data} = props;
@@ -65,7 +64,7 @@ const DialogProject = (props) => {
             </Grid>
           </Grid>
           <br />
-          {generateChips(technologies)}
+          <ChipsGenerator chips={technologies} theme={theme().palette}/>
         </div>          
       </div>
     </Dialog>

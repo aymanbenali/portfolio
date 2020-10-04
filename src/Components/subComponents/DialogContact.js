@@ -9,14 +9,13 @@ import TextField from '@material-ui/core/TextField';
 import Slide from '@material-ui/core/Slide';
 import Grid from '@material-ui/core/Grid';
 import Button from '@material-ui/core/Button';
-import theme from './theme'
 
 const Transition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction="up" ref={ref} {...props} />;
 });
 
 const DialogContact = (props) => {
-  const {state, handle} = props; 
+  const {state, handle, titleTheme} = props; 
   return (
     <Dialog
       fullScreen
@@ -43,7 +42,7 @@ const DialogContact = (props) => {
           }}>
           <Grid container spacing={3}>
             <Grid item xs={12}>
-              <Typography variant='h3' style={theme().palette.title}> Thanks for taking the time to reach out. How can I help you today?</Typography>
+              <Typography variant='h3' style={titleTheme}> Thanks for taking the time to reach out. How can I help you today?</Typography>
             </Grid>
             <Grid item xs={3} />
             <Grid item xs={3}>
