@@ -7,7 +7,7 @@
   pointer-events: none;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;1,300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;1,300&display=swap");
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
@@ -34,6 +34,58 @@
 
 .App-link {
   color: #61dafb;
+}
+
+.cards {
+  margin-top: 2%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+}
+
+.cards grid {
+  width: 100%;
+  height: 100%;
+}
+
+.card {
+  border-style: solid;
+  border-radius: 25px;
+  border-color: #7510f7;
+}
+
+.description {
+  display: grid;
+  grid-template-columns: 1% repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.divImg {
+  width: 80%;
+  height: 100%;
+  margin-left: 10%;
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.divDesc {
+  width: 120%;
+  grid-column: span 3;
+}
+
+.divTypo {
+  background-color: #7510f7;
+  height: 105%;
+  width: 80%;
+  border-radius: 25px;
+}
+
+.responsive {
+  width: 100%;
+  height: 100%;
+  border-style: solid;
+  border-color: #7510f7;
+  border-radius: 50%;
 }
 
 @keyframes App-logo-spin {

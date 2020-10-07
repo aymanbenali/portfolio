@@ -25,7 +25,9 @@ const Carrer = ({ data, theme }) => {
       <div style={{ marginTop: "20px" }}>
         <Typography variant="h4" style={title}>
           Projects
-          <MediaCard projects={projects} theme={card} />
+          <div>
+            <MediaCard projects={projects} theme={card} />
+          </div>
         </Typography>
       </div>
     </div>

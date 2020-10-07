@@ -19,7 +19,6 @@ const Transition = React.forwardRef((props, ref) => (
 const DialogProject = (props) => {
   const { state, handle, data, theme } = props;
   const screenSize = useWindowSize();
-  console.log(screenSize);
   const { description, name, images, technologies } = data;
   if (!description) return <div></div>;
   const descriptions = description.split(".");

@@ -21,18 +21,18 @@ const MediaCard = ({ projects, theme }) => {
   const handleClose = () => setOpen(false);
 
   return (
-    <Grid container>
+    <Grid container class="cards">
       {projects.map((project) => {
         const { description, name, images } = project;
         return (
-          <Grid item style={grid}>
+          <Grid item>
             <Dialog
               state={open}
               handle={handleClose}
               data={currentData}
               theme={theme}
             />
-            <Card style={root}>
+            <Card class="card">
               <CardActionArea onClick={() => handleClickOpen(project)}>
                 <CardMedia
                   style={media}

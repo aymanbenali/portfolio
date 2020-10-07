@@ -25,9 +25,9 @@ const App = () => {
               theme={Theme().palette}
             />
             <Carrer data={JsonData} theme={Theme().palette} />
-            <Footer />
           </MuiThemeProvider>
         </Container>
+        <Footer />
       </div>
     );
 };

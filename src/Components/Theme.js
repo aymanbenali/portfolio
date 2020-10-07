@@ -5,7 +5,8 @@ const font = "'Roboto Condensed', sans-serif";
 
 const Theme = () => {
   const computerDefaultSize = 1246;
-  const size = useWindowSize();
+  const { width } = useWindowSize();
+  console.log(width);
   return createMuiTheme({
     palette: {
       firestSalute: {
@@ -22,14 +23,14 @@ const Theme = () => {
       },
       description: {
         grid: {
-          margin: size.width < computerDefaultSize ? "20%" : "",
-          marginTop: size.width > computerDefaultSize ? "7%" : "",
+          marginTop: "7%",
         },
         mask: {
           backgroundColor: "#7510F7",
           height: "105%",
           borderRadius: "25px",
-          width: size.width < computerDefaultSize ? "120%" : "auto",
+          marginLeft: "7%",
+          width: width > computerDefaultSize ? "120%" : "90%",
         },
         text: {
           fontFamily: font,
@@ -41,18 +42,14 @@ const Theme = () => {
         },
       },
       card: {
-        root: {
-          borderStyle: "solid",
-          borderRadius: "20px",
-          borderColor: "#7510F7",
-        },
         grid: {
           margin: "2%",
-          maxWidth: size.width > computerDefaultSize ? "100%" : 330,
-          width: size.width > computerDefaultSize ? "auto" : "",
+          maxWidth: width > computerDefaultSize ? "100%" : 330,
+          width: width > computerDefaultSize ? "auto" : "",
         },
         media: {
           height: 140,
+          borderRadius: "20px",
         },
       },
       jobs: {
@@ -94,7 +91,6 @@ const Theme = () => {
         contrastText: "#000",
       },
     },
-    size,
   });
 };
 
