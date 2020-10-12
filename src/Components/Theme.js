@@ -17,7 +17,7 @@ const Theme = () => {
         withWhite: { color: "#FFFFFF" },
         withoutWhite: { color: "#141C3A" },
         orginize: {
-          marginLeft: 5,
+          margin: 5,
           color: "#FFFFFF",
         },
       },

@@ -1,6 +1,4 @@
 import React, { useEffect, useState } from "react";
-import Grid from "@material-ui/core/Grid";
-import ReactRoundedImage from "react-rounded-image";
 import Typography from "@material-ui/core/Typography";
 
 import Technologies from "./Technologies";

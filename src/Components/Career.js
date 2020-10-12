@@ -4,7 +4,7 @@ import MediaCard from "./subComponents/Card";
 import Jobs from "./subComponents/Jobs";
 
 const Carrer = ({ data, theme }) => {
-  const { mask, title, card } = theme;
+  const { mask, title } = theme;
   const { jobs, projects } = data;
   return (
     <div
@@ -26,7 +26,7 @@ const Carrer = ({ data, theme }) => {
         <Typography variant="h4" style={title}>
           Projects
           <div>
-            <MediaCard projects={projects} theme={card} />
+            <MediaCard projects={projects} theme={theme} />
           </div>
         </Typography>
       </div>

@@ -9,7 +9,7 @@ import Typography from "@material-ui/core/Typography";
 import Dialog from "./DialogProject";
 
 const MediaCard = ({ projects, theme }) => {
-  const { root, grid, media } = theme;
+  const { media } = theme.card;
   const [open, setOpen] = useState(false);
   const [currentData, setcurrentData] = useState(false);
 

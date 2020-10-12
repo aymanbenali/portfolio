@@ -56,27 +56,26 @@
 }
 
 .description {
-  display: grid;
-  grid-template-columns: 1% repeat(auto-fit, minmax(240px, 1fr));
+  display: flex;
+  justify-content: space-between;
+  flex-direction: rox;
 }
 
 .divImg {
-  width: 80%;
-  height: 100%;
-  margin-left: 10%;
-  grid-column: span 2;
-  grid-row: span 2;
+  width: 20%;
+  margin-left: 2%;
 }
 
 .divDesc {
-  width: 120%;
-  grid-column: span 3;
+  width: 80%;
+  margin-right: 2%;
 }
 
 .divTypo {
+  height: 100%;
+  margin-left: 5%;
+  margin-right: 0.5%;
   background-color: #7510f7;
-  height: 105%;
-  width: 80%;
   border-radius: 25px;
 }
 
@@ -86,6 +85,24 @@
   border-style: solid;
   border-color: #7510f7;
   border-radius: 50%;
+}
+
+@media (max-width: 800px) {
+  .description {
+    flex-direction: column;
+  }
+  .divTypo {
+    width: 100%;
+    margin-left: 10%;
+  }
+  .divImg {
+    margin-left: 10%;
+  }
+  .responsive {
+    width: 400%;
+    height: 80%;
+    align-items: center;
+  }
 }
 
 @keyframes App-logo-spin {
