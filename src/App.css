@@ -1,25 +1,4 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;1,300&display=swap");
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-#particles-js {
-  height: 100%;
-  width: 100%;
-  position: fixed;
-  z-index: -100;
-}
 
 .App-header {
   background-color: #282c34;
@@ -35,7 +14,9 @@
 .App-link {
   color: #61dafb;
 }
-
+.resumeButton {
+  margin-left: 2rem;
+}
 .cards {
   margin-top: 2%;
   display: grid;
@@ -55,14 +36,17 @@
   border-color: #7510f7;
 }
 
+/* professional carrer section*/
+
 .description {
   display: flex;
-  justify-content: space-between;
-  flex-direction: rox;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
 }
 
-.divImg {
-  width: 20%;
+.description img {
+  max-width: 18rem;
   margin-left: 2%;
 }
 
@@ -89,27 +73,29 @@
 
 @media (max-width: 800px) {
   .description {
+    display: flex;
     flex-direction: column;
-  }
-  .divTypo {
-    width: 100%;
-    margin-left: 10%;
-  }
-  .divImg {
-    margin-left: 10%;
-  }
-  .responsive {
-    width: 400%;
-    height: 80%;
     align-items: center;
+    justify-content: space-between;
   }
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  .description img {
+    height: auto;
+    max-width: 18rem;
+    margin: 2rem;
   }
-  to {
-    transform: rotate(360deg);
+  .divDesc {
+    width: 90%;
+    margin-right: 1rem;
+  }
+  .projects {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    width: auto;
+  }
+  .resumeButton {
+    margin: auto;
+    padding: 1%;
   }
 }

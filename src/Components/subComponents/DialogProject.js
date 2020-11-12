@@ -8,6 +8,7 @@ import Container from "@material-ui/core/Container";
 import Dialog from "@material-ui/core/Dialog";
 import Slide from "@material-ui/core/Slide";
 import Grid from "@material-ui/core/Grid";
+import Zoom from "react-reveal/Zoom";
 
 import ChipsGenerator from "./Chips";
 import useWindowSize from "./screenSize";
@@ -17,75 +18,87 @@ const Transition = React.forwardRef((props, ref) => (
 ));
 
 const DialogProject = (props) => {
+  let descriptions;
   const { state, handle, data, theme } = props;
   const screenSize = useWindowSize();
   const { description, name, images, technologies } = data;
   if (!description) return <div></div>;
-  const descriptions = description.split(".");
-  descriptions.pop();
+  if (Array.isArray(description)) descriptions = description;
+  else {
+    descriptions = description.split(".");
+    descriptions.pop();
+  }
+  console.log(descriptions);
   const imgSize = screenSize > 1246 ? 300 : 280;
 
   return (
-    <Dialog
-      fullScreen
-      open={state}
-      onClose={handle}
-      TransitionComponent={Transition}
-    >
-      <div style={{ backgroundColor: "#FFFFFF" }}>
-        <AppBar>
-          <Toolbar>
-            <IconButton
-              edge="start"
-              color="inherit"
-              onClick={handle}
-              aria-label="close"
-            >
-              <CloseIcon />
-            </IconButton>
-            <Typography variant="h6">{name}</Typography>
-          </Toolbar>
-        </AppBar>
-        <div
-          style={{
-            borderStyle: "solid",
-            borderColor: "#7510F7",
-            borderRadius: "25px",
-            marginTop: "100px",
-            marginLeft: "20px",
-            marginRight: "20px",
-            padding: "30px",
-          }}
-        >
-          <Grid
-            container
-            direction={screenSize < 1246 ? "column" : ""}
-            justify="center"
-            alignItems="stretch"
+    <Zoom>
+      <Dialog
+        fullScreen
+        open={state}
+        onClose={handle}
+        TransitionComponent={Transition}
+      >
+        <div style={{ backgroundColor: "#FFFFFF" }}>
+          <AppBar>
+            <Toolbar>
+              <IconButton
+                edge="start"
+                color="inherit"
+                onClick={handle}
+                aria-label="close"
+              >
+                <CloseIcon />
+              </IconButton>
+              <Typography variant="h6">{name}</Typography>
+            </Toolbar>
+          </AppBar>
+          <div
+            style={{
+              borderStyle: "solid",
+              borderColor: "#7510F7",
+              borderRadius: "25px",
+              marginTop: "100px",
+              marginLeft: "20px",
+              marginRight: "20px",
+              padding: "30px",
+            }}
           >
-            <Grid item xs={3}>
-              <img alt="complex" src={images[0]} width={imgSize} height="200" />
+            <Grid
+              container
+              direction={screenSize < 1246 ? "column" : ""}
+              justify="center"
+              alignItems="stretch"
+            >
+              <Grid item xs={3}>
+                <img
+                  alt="complex"
+                  src={images[0]}
+                  width={imgSize}
+                  height="200"
+                />
+              </Grid>
+              <Grid item>
+                <Typography style={theme.typographyWhiteColor}>
+                  {" "}
+                  {name}{" "}
+                </Typography>
+                <Container maxWidth="la">
+                  {descriptions.map((description) => (
+                    <Typography style={theme.typographyWhiteColor}>
+                      {" "}
+                      ✓{description}.{" "}
+                    </Typography>
+                  ))}
+                </Container>
+              </Grid>
             </Grid>
-            <Grid item>
-              <Typography style={theme.typographyWhiteColor}>
-                {" "}
-                {name}{" "}
-              </Typography>
-              <Container maxWidth="la">
-                {descriptions.map((description) => (
-                  <Typography style={theme.typographyWhiteColor}>
-                    {" "}
-                    ✓{description}.{" "}
-                  </Typography>
-                ))}
-              </Container>
-            </Grid>
-          </Grid>
-          <br />
-          <ChipsGenerator chips={technologies} theme={theme} />
+            <br />
+            <ChipsGenerator chips={technologies} theme={theme} />
+          </div>
         </div>
-      </div>
-    </Dialog>
+      </Dialog>
+    </Zoom>
   );
 };
 

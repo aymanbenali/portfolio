@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Typography from "@material-ui/core/Typography";
+import Fade from "react-reveal/Fade";
 
 import Technologies from "./Technologies";
 import MyPhoto from "../../images/Ayman.png";
@@ -30,24 +31,26 @@ const MyDescription = ({ data, theme }) => {
   myDescription.pop();
   return (
     <div class="description">
-      <div class="divImg">
-        <img src={MyPhoto} alt="avatar" class="responsive" />
-      </div>
+      <Fade left cascade>
+        <img src={MyPhoto} alt="avatar" className="responsive" />
+      </Fade>
       <div class="divDesc">
-        <Typography component="div" class="divTypo">
-          <br />
-          <Typography variant="h4" style={text}>
-            <b> Hi I'm Ayman, Nice To Meet You </b>
+        <Fade right cascade>
+          <Typography component="div" class="divTypo">
+            <br />
+            <Typography variant="h4" style={text}>
+              <b> Hi I'm Ayman, Nice To Meet You </b>
+            </Typography>
+            {myDescription.map((item) => (
+              <Typography style={text}> {item}. </Typography>
+            ))}
+            <Technologies
+              theme={theme}
+              technologies={technologies}
+              text={"Here are some of the most technologies i work with:"}
+            />
           </Typography>
-          {myDescription.map((item) => (
-            <Typography style={text}> {item}. </Typography>
-          ))}
-          <Technologies
-            theme={theme}
-            technologies={technologies}
-            text={"Here are some of the most technologies i work with:"}
-          />
-        </Typography>
+        </Fade>
       </div>
     </div>
   );

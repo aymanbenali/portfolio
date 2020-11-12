@@ -6,7 +6,6 @@ const font = "'Roboto Condensed', sans-serif";
 const Theme = () => {
   const computerDefaultSize = 1246;
   const { width } = useWindowSize();
-  console.log(width);
   return createMuiTheme({
     palette: {
       firestSalute: {

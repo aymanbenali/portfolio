@@ -6,18 +6,19 @@ import pdf from "../data/Ayman_CV_Eng.pdf";
 const Header = ({ theme }) => {
   const [open, setOpen] = React.useState(false);
 
-  const handleClickOpen = () => {
-    setOpen(true);
-  };
+  const handleClickOpen = () => setOpen(true);
 
-  const handleClose = () => {
-    setOpen(false);
-  };
+  const handleClose = () => setOpen(false);
 
   return (
     <div style={{ marginTop: "20px" }}>
       <DialogContact state={open} handle={handleClose} titleTheme={theme} />
-      <Grid container justify="center" alignItems="stretch">
+      <Grid
+        container
+        className="resumeButton"
+        justify="center"
+        alignItems="stretch"
+      >
         <Grid item xs={2}>
           <Button
             variant="outlined"
