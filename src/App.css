@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;1,300&display=swap");
+@import url(https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;1,300&display=swap);
 
 .App-header {
   background-color: #282c34;
@@ -71,6 +71,37 @@
   border-radius: 50%;
 }
 
+/* carrer dialog */
+
+.dialog {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-height: 96vh;
+}
+
+.dialog2 {
+  display: flex;
+  flex-direction: row;
+}
+
+.dialog3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.paper {
+  height: 100%;
+}
+
+.close-modal {
+  position: absolute;
+  right: 1rem;
+  top: 2.5rem;
+  z-index: 1000;
+}
+
 @media (max-width: 800px) {
   .description {
     display: flex;
@@ -97,5 +128,15 @@
   .resumeButton {
     margin: auto;
     padding: 1%;
+  }
+
+  .dialog2 {
+    flex-direction: column;
+    margin-top: 3rem;
+  }
+
+  .dialog2 img {
+    max-width: 15rem;
+    margin-bottom: 1rem;
   }
 }
