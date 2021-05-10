@@ -1,22 +1,88 @@
 {
   "about": {
-    "description": "My name is Ayman Benali, Informatics Engineer, graduate of the Faculty of Science and Technology in Tangier, Morocco.Passionate about computer science and agile software development, I always enjoy exploring and mastering new technologies with the goal of building innovative solutions for web and mobile platforms.I always strive to produce effective solutions to solve various problems by writing clean, high-quality, scalable and well-tested code. ",
+    "description": "My name is Ayman Benali, Engineer in computer systems and decision support from the Faculty of Science and Technology in Tangier,Morocco. Passionate about computer science and agile software development, I always enjoy exploring and mastering new technologies with the goal of building innovative solutions for web and mobile platforms. I always strive to produce effective solutions to solve various problems by writing clean, high-quality, scalable and well-tested code. ",
     "technologies": [
-      { "name": "JavaScript (ES6+)", "color": "#EFD81D" },
-      { "name": "HTML & CSS", "color": "#DD4B25" },
-      { "name": "ReactJs", "color": "#5CD2F3" },
-      { "name": "Python", "color": "#F7BD2F" },
-      { "name": "Node.js", "color": "#7FC728" },
-      { "name": "TFLearn", "color": "#F7BD2F" },
-      { "name": "Scikit-Learn", "color": "#F79100" }
+      {
+        "name": "JavaScript (ES6+)",
+        "color": "#EFD81D"
+      },
+      {
+        "name": "ReactJs",
+        "color": "#5CD2F3"
+      },
+      {
+        "name": "Node.js",
+        "color": "#7FC728"
+      },
+      {
+        "name": "Python",
+        "color": "#F7BD2F"
+      },
+      {
+        "name": "HTML & CSS",
+        "color": "#DD4B25"
+      },
+      {
+        "name": "TFLearn",
+        "color": "#F7BD2F"
+      },
+      {
+        "name": "Scikit-Learn",
+        "color": "#F79100"
+      }
     ]
   },
   "jobs": [
     {
-      "name": "Data Scientist Jr & FullStack Web Developer",
+      "name": "FullStack Web Developer",
+      "startingTime": "Nov 2020",
+      "endingTime": "Present",
+      "images": [
+        "https://uzerly.fr/wp-content/uploads/2020/07/Logo-Uzerly.png"
+      ],
+      "job": "Uzerly by CibleClic",
+      "description": [
+        "Member of the design and development team of uzerly SaaS plateform.",
+        "Write and create a clean and efficient code for simple or complex tasks."
+      ],
+      "technologies": [
+        {
+          "name": "Node.js",
+          "color": "#7FC728"
+        },
+        {
+          "name": "ReactJs",
+          "color": "#5CD2F3"
+        },
+        {
+          "name": "ExpressJs",
+          "color": "#7B7B7B"
+        },
+        {
+          "name": "Docker",
+          "color": "#5CD2F3"
+        },
+        {
+          "name": "MySQL",
+          "color": "#DD8A00"
+        },
+        {
+          "name": "RestApi",
+          "color": "#F7BD2F"
+        },
+        {
+          "name": "Git",
+          "color": "#F79100"
+        }
+      ]
+    },
+    {
+      "name": "FullStack Web Developer & Data Scientist Jr",
       "startingTime": "Jul 2018",
       "endingTime": "Nov 2020 . 2 yrs 5 mos",
-      "images": ["https://i.suar.me/Gwgzq/l"],
+      "images": [
+        "https://i.suar.me/Gwgzq/l"
+      ],
       "job": "MyOpla Software Solutions",
       "description": [
         "Creation of a platform to set up a tool to control and accelerate for managing the database.",
@@ -24,52 +90,122 @@
         "Energy Pack Tracking System - Green Yellow - Group Casino."
       ],
       "technologies": [
-        { "name": "ReactJs", "color": "#5CD2F3" },
-        { "name": "ExpressJs", "color": "#7B7B7B" },
-        { "name": "Docker", "color": "#5CD2F3" },
-        { "name": "MySQL", "color": "#DD8A00" },
-        { "name": "Node.js", "color": "#7FC728" },
-        { "name": "RestApi", "color": "#F7BD2F" },
-        { "name": "Git", "color": "#F79100" }
+        {
+          "name": "ReactJs",
+          "color": "#5CD2F3"
+        },
+        {
+          "name": "ExpressJs",
+          "color": "#7B7B7B"
+        },
+        {
+          "name": "Docker",
+          "color": "#5CD2F3"
+        },
+        {
+          "name": "MySQL",
+          "color": "#DD8A00"
+        },
+        {
+          "name": "Node.js",
+          "color": "#7FC728"
+        },
+        {
+          "name": "RestApi",
+          "color": "#F7BD2F"
+        },
+        {
+          "name": "Git",
+          "color": "#F79100"
+        }
       ]
     },
     {
       "name": "Data Scientist Jr",
       "startingTime": "Feb 2018",
       "endingTime": "Jul 2018 . 5 month internship",
-      "images": ["https://i.suar.me/AZrVN/l"],
+      "images": [
+        "https://i.suar.me/AZrVN/l"
+      ],
       "job": "MyOpla Call Center",
       "description": [
         "Creation of an algorithmic and mathematical model for the analysis and the processing of the audio files in order to extract arguments necessary to convince the customers to continue their purchases."
       ],
       "technologies": [
-        { "name": "Shell", "color": "#2C0A21" },
-        { "name": "Pandas", "color": "#120751" },
-        { "name": "Hadoop", "color": "#5CD2F3" },
-        { "name": "Spacy", "color": "#5CD2F3" },
-        { "name": "NLTK", "color": "#5CD2F3" },
-        { "name": "Python", "color": "#F7BD2F" },
-        { "name": "Node.js", "color": "#7FC728" },
-        { "name": "TFLearn", "color": "#F7BD2F" },
-        { "name": "Scikit-Learn", "color": "#F79100" }
+        {
+          "name": "Shell",
+          "color": "#2C0A21"
+        },
+        {
+          "name": "Pandas",
+          "color": "#120751"
+        },
+        {
+          "name": "Hadoop",
+          "color": "#5CD2F3"
+        },
+        {
+          "name": "Spacy",
+          "color": "#5CD2F3"
+        },
+        {
+          "name": "NLTK",
+          "color": "#5CD2F3"
+        },
+        {
+          "name": "Python",
+          "color": "#F7BD2F"
+        },
+        {
+          "name": "Node.js",
+          "color": "#7FC728"
+        },
+        {
+          "name": "TFLearn",
+          "color": "#F7BD2F"
+        },
+        {
+          "name": "Scikit-Learn",
+          "color": "#F79100"
+        }
       ]
     },
     {
       "name": "Artificial Vision Developer ",
       "startingTime": "Mar 2018",
       "endingTime": "Mar 2019 . 1 yr",
-      "images": ["https://i.suar.me/X0W5B/l"],
+      "images": [
+        "https://i.suar.me/X0W5B/l"
+      ],
       "job": "FABLAB, FST Tangier",
       "description": [
         "Object detection using classifier-based systems and a learning model (YOLO <You Only Look Once>). Detection and estimation of markings (white lines) from a Kinect camera on the vehicle."
       ],
       "technologies": [
-        { "name": "Python", "color": "#F7BD2F" },
-        { "name": "OpenCv", "color": "#0000F7" },
-        { "name": "Pandas", "color": "#120751" },
-        { "name": "Tensorflow", "color": "#F7BD2F" },
-        { "name": "YOLO V2", "color": "#F7BD2F" },
-        { "name": "Openkinect", "color": "#359C45" }
+        {
+          "name": "Python",
+          "color": "#F7BD2F"
+        },
+        {
+          "name": "OpenCv",
+          "color": "#0000F7"
+        },
+        {
+          "name": "Pandas",
+          "color": "#120751"
+        },
+        {
+          "name": "Tensorflow",
+          "color": "#F7BD2F"
+        },
+        {
+          "name": "YOLO V2",
+          "color": "#F7BD2F"
+        },
+        {
+          "name": "Openkinect",
+          "color": "#359C45"
+        }
       ]
     }
   ],
@@ -78,31 +214,85 @@
       "name": "Face recognition system with only a picture",
       "description": "Identifying known faces with their names, also detect strangers as unknown and implemented on a Raspberry Pi.",
       "technologies": [
-        { "name": "Python", "color": "#F7BD2F" },
-        { "name": "Sqlite3", "color": "#120751" },
-        { "name": "smtplib(gmail api)", "color": "#D02F24" },
-        { "name": "Tkinter", "color": "#120751" },
-        { "name": "face_recognition", "color": "#120751" },
-        { "name": "dlib", "color": "#5AA157" },
-        { "name": "OpenCv", "color": "#0000F7" }
+        {
+          "name": "Python",
+          "color": "#F7BD2F"
+        },
+        {
+          "name": "Sqlite3",
+          "color": "#120751"
+        },
+        {
+          "name": "smtplib(gmail api)",
+          "color": "#D02F24"
+        },
+        {
+          "name": "Tkinter",
+          "color": "#120751"
+        },
+        {
+          "name": "face_recognition",
+          "color": "#120751"
+        },
+        {
+          "name": "dlib",
+          "color": "#5AA157"
+        },
+        {
+          "name": "OpenCv",
+          "color": "#0000F7"
+        }
       ],
-      "images": ["https://i.suar.me/xKQgr/m", "https://i.suar.me/7AKjX/m"]
+      "images": [
+        "https://i.suar.me/xKQgr/m",
+        "https://i.suar.me/7AKjX/m"
+      ]
     },
     {
       "name": "Car Plate Detection System",
       "description": "Detecting cars, detecting the plates position and extracting information from it (European plates).",
       "short": "Identifying car plate with a surveillance camera.",
       "technologies": [
-        { "name": "Python", "color": "#F7BD2F" },
-        { "name": "OpenCv", "color": "#0000F7" },
-        { "name": "Pandas", "color": "#120751" },
-        { "name": "numpy", "color": "#4B73C9" },
-        { "name": "Tensorflow", "color": "#F7BD2F" },
-        { "name": "YOLO V2", "color": "#F7BD2F" },
-        { "name": "pytesseract", "color": "#D02F24" },
-        { "name": "openalpr", "color": "#F7BD2F" },
-        { "name": "Tkinter", "color": "#F7BD2F" },
-        { "name": "Sqlite3", "color": "#F7BD2F" }
+        {
+          "name": "Python",
+          "color": "#F7BD2F"
+        },
+        {
+          "name": "OpenCv",
+          "color": "#0000F7"
+        },
+        {
+          "name": "Pandas",
+          "color": "#120751"
+        },
+        {
+          "name": "numpy",
+          "color": "#4B73C9"
+        },
+        {
+          "name": "Tensorflow",
+          "color": "#F7BD2F"
+        },
+        {
+          "name": "YOLO V2",
+          "color": "#F7BD2F"
+        },
+        {
+          "name": "pytesseract",
+          "color": "#D02F24"
+        },
+        {
+          "name": "openalpr",
+          "color": "#F7BD2F"
+        },
+        {
+          "name": "Tkinter",
+          "color": "#F7BD2F"
+        },
+        {
+          "name": "Sqlite3",
+          "color": "#F7BD2F"
+        }
       ],
       "images": [
         "https://i.suar.me/zoQM4/m",
@@ -116,12 +306,30 @@
       "description": "Object detection using classifier-based systems and a learning model (YOLO <You Only Look Once>). Detection and estimation of markings (white lines) from a Kinect camera on the vehicle.Creating a dashboard indicating the speed, the energy consumed, the battery level, the external temperature, time, speed, the circuit, the driving mode (autonomous / normal), the battery temperature.",
       "short": "TÜBİTAK Efficiency Challenge Electric Vehicle",
       "technologies": [
-        { "name": "Python", "color": "#F7BD2F" },
-        { "name": "OpenCv", "color": "#0000F7" },
-        { "name": "Pandas", "color": "#120751" },
-        { "name": "Tensorflow", "color": "#F7BD2F" },
-        { "name": "YOLO V2", "color": "#F7BD2F" },
-        { "name": "Openkinect", "color": "#359C45" }
+        {
+          "name": "Python",
+          "color": "#F7BD2F"
+        },
+        {
+          "name": "OpenCv",
+          "color": "#0000F7"
+        },
+        {
+          "name": "Pandas",
+          "color": "#120751"
+        },
+        {
+          "name": "Tensorflow",
+          "color": "#F7BD2F"
+        },
+        {
+          "name": "YOLO V2",
+          "color": "#F7BD2F"
+        },
+        {
+          "name": "Openkinect",
+          "color": "#359C45"
+        }
       ],
       "images": [
         "https://i.suar.me/YGwyJ/m",
@@ -131,52 +339,21 @@
       ]
     },
     {
-      "name": "Electronic library management platform",
-      "description": "The project contains many advantages, including:.The ability to control books classified for a group of sections and languages.The ability to download books, comment on them, and like them.The ability to view the calendar and upcoming events added by the administration (such as book fairs, for example).The possibility of correspondence between members.The ability to add topics.Control all the features of the site.The same features are found on an Android app connected via API.",
-      "technologies": [
-        { "name": "HTML & CSS", "color": "#DD4B25" },
-        { "name": "JavaScript", "color": "#EFD81D" },
-        { "name": "PHP", "color": "#7377AD" },
-        { "name": "Laravel", "color": "#E73122" }
-      ],
-      "images": [
-        "https://mostaql.hsoubcdn.com/uploads/385230-Wy3vp-1532440237-3.png",
-        "https://mostaql.hsoubcdn.com/uploads/385230-OoIjm-1532440237-4.png",
-        "https://mostaql.hsoubcdn.com/uploads/385230-pVldE-1532440237-5.png",
-        "https://mostaql.hsoubcdn.com/uploads/385230-7YgGU-1532440237-6.png",
-        "https://mostaql.hsoubcdn.com/uploads/385230-4CQeY-1532440238-7.png",
-        "https://mostaql.hsoubcdn.com/uploads/385230-7KWg6-1532440238-8.png",
-        "https://mostaql.hsoubcdn.com/uploads/385230-uFDY5-1532440239-12.png",
-        "https://mostaql.hsoubcdn.com/uploads/385230-B17wO-1532440239-2.png"
-      ]
-    },
-    {
-      "name": "School or college administration web application",
-      "description": "School or college administration web application.The script can be administered by a school or college, so it provides many advantages to four types of users, which are:.The visitor who can view the main pages of the site, view basic information and contact the site’s management.The student who enables the site to view the latest news related to the school or his class, so that each class has its own page, enables him to:.The professor can, through the site.",
-      "technologies": [
-        { "name": "HTML & CSS", "color": "#DD4B25" },
-        { "name": "JavaScript", "color": "#EFD81D" },
-        { "name": "PHP", "color": "#7377AD" },
-        { "name": "Laravel", "color": "#E73122" }
-      ],
-      "images": [
-        "https://i.suar.me/na4px/l",
-        "https://i.suar.me/adMv9/l",
-        "https://i.suar.me/EXO74/l",
-        "https://i.suar.me/plvp9/l",
-        "https://i.suar.me/WNjvQ/l",
-        "https://i.suar.me/vj4pq/l",
-        "https://i.suar.me/L5xzx/l",
-        "https://i.suar.me/20GWW/l"
-      ]
-    },
-    {
       "name": "QR Code Reader and Generator",
       "description": "The work is an Android application, programmed in Java in addition to the OpenCV library, the application extracts the content of the QR code captured by a camera and displays it on the screen, and if the QR code contains a link, it opens the link on the browser, and the application allows the possibility of generating a QR Code From a text or link and save it as an image or send it through various sharing methods.",
       "technologies": [
-        { "name": "C++", "color": "#6195CB" },
-        { "name": "OpenCv", "color": "#0000F7" },
-        { "name": "Android", "color": "#6195CB" }
+        {
+          "name": "C++",
+          "color": "#6195CB"
+        },
+        {
+          "name": "OpenCv",
+          "color": "#0000F7"
+        },
+        {
+          "name": "Android",
+          "color": "#6195CB"
+        }
       ],
       "images": [
         "https://mostaql.hsoubcdn.com/uploads/385230-9vciV-1532266174-photo_2018-07-22_14-19-55.jpg",
@@ -190,6 +367,6 @@
   "titles": [
     "Hello World 👋",
     "My name is Ayman Benali",
-    "Data Scientist Jr & Full Stack Web Developer."
+    "Full Stack Web Developer & Data Scientist Jr."
   ]
 }

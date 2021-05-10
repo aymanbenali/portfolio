@@ -1,16 +1,11 @@
 import React from "react";
 import Typography from "@material-ui/core/Typography";
 import Container from "@material-ui/core/Container";
-import Slide from "@material-ui/core/Slide";
 import Modal from "react-modal";
 import Zoom from "react-reveal/Zoom";
 
 import ChipsGenerator from "./Chips";
 import useWindowSize from "./screenSize";
-
-const Transition = React.forwardRef((props, ref) => (
-  <Slide direction="up" ref={ref} {...props} />
-));
 
 const DialogProject = (props) => {
   let descriptions;
